@@ -25,16 +25,18 @@ def load_and_explore_data(filename):
     Returns:
         pandas DataFrame containing the data
     """
-    # TODO: Load the CSV file using pandas
+    data = pd.read_csv(filename)    
+
+    print("--- Test score Data ---")
+    print(f"\nFirst 5 rows:")
+    print(data.head())
     
-    # TODO: Print the first 5 rows
+    print(f"\nDataset shape: {data.shape[0]} rows, {data.shape[1]} columns")
     
-    # TODO: Print the shape of the dataset (number of rows and columns)
+    print(f"\nBasic stats:")
+    print(data.describe())
     
-    # TODO: Print basic statistics (mean, min, max, etc.)
-    
-    # TODO: Return the dataframe
-    pass
+    return data
 
 
 def create_scatter_plot(data):
