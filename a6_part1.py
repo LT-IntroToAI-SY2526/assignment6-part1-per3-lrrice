@@ -204,18 +204,24 @@ if __name__ == "__main__":
     
     # Step 3: Split the data
     # TODO: Call split_data() and store the returned values
+    X_train, X_test, y_train, y_test = split_data(data)
+
     
     # Step 4: Train the model
     # TODO: Call train_model() with training data
+    model = train_model(X_train, y_train)
     
     # Step 5: Evaluate the model
     # TODO: Call evaluate_model() with the model and test data
+    predictions = evaluate_model(model, X_test, y_test)
     
     # Step 6: Visualize results
     # TODO: Call visualize_results() with all the necessary arguments
+    visualize_results(X_train, y_train, X_test, y_test, predictions, model)
     
     # Step 7: Make a new prediction
     # TODO: Call make_prediction() for a student who studied 7 hours
+    make_prediction(model, 85)
     
     print("\n" + "=" * 70)
     print("✓ Assignment complete! Check your saved plots.")
